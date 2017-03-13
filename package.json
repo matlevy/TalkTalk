@@ -14,7 +14,8 @@
     "karma-firefox-launcher": "^0.1.7",
     "karma-jasmine": "^0.3.8",
     "karma-junit-reporter": "^0.4.1",
-    "protractor": "^4.0.9"
+    "protractor": "^4.0.9",
+    "node-sass": "^4.0.0"
   },
   "scripts": {
     "postinstall": "bower install",
@@ -31,6 +32,9 @@
 
     "preupdate-webdriver": "npm install",
     "update-webdriver": "webdriver-manager update",
+
+    "sass": "node-sass ./styles/* ./app/css/main.css",
+    "sass-watch": "node-sass -w ./styles/* ./app/css/main.css",
 
     "preprotractor": "npm run update-webdriver",
     "protractor": "protractor e2e-tests/protractor.conf.js",
